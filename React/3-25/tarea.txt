@@ -1,0 +1,3 @@
+Tarea de React:
+
+- Leer todos los contenidos del curso
