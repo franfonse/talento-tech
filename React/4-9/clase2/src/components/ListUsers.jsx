@@ -3,13 +3,12 @@ function ListUsers() {
 
     return (
         <ul>
-            {
-                users.map(user => (
-                    <li key={user}>{user}</li>
-                ))
-            }
+            {users.map(user => (
+                <li key={user}>{user}</li>
+            ))}
         </ul>
     );
+
 }
 
 export default ListUsers;
