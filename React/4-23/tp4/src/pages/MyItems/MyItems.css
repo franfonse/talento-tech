@@ -1,0 +1,113 @@
+/*—————— Cart Table Container ——————*/
+.cart-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Header: Title Row */
+.cart-table thead tr:first-child th {
+    background: #EF4444;
+    /* warm red */
+    color: #fff;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+/* Header: Columns */
+.cart-table thead tr:nth-child(2) th {
+    background: #FEE2E2;
+    /* light red/pink */
+    color: #991B1B;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+}
+
+/* Body Rows */
+.cart-table tbody tr {
+    background: #fff;
+    transition: background 0.2s ease;
+}
+
+.cart-table tbody tr:nth-child(even) {
+    background: #FEF2F2;
+}
+
+.cart-table tbody tr:hover {
+    background: #FEE2E2;
+}
+
+/* Cells */
+.cart-table td {
+    padding: 0.75rem 1rem;
+    color: #4B5563;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+/* Center quantity column */
+.cart-table td:nth-child(2) {
+    text-align: center;
+}
+
+/* Empty‑cart message */
+.h4-empty {
+    text-align: center;
+    color: #6B7280;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+
+    .cart-table thead tr:nth-child(2) th,
+    .cart-table td {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .h4-empty {
+        font-size: 0.9rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.btn-clear {
+    background: #EF4444;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.btn-clear:hover {
+    background: #DC2626;
+    box-shadow: 0 6px 16px rgba(220, 38, 38, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-clear:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(220, 38, 38, 0.6);
+}

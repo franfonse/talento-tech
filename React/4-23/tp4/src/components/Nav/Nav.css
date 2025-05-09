@@ -1,0 +1,18 @@
+nav {
+    background-color: #121212;
+}
+
+nav ul {
+    display: flex;
+    height: 100px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+nav ul a {
+    margin: 0 0 8px 50px;
+    text-decoration: none;
+    color: white;
+}
