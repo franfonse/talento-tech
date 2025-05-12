@@ -1,0 +1,131 @@
+/* full‑screen overlay that blocks pointer events */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(30, 30, 30);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* the spinner itself */
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 6px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.items-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 0.5rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.items-table thead tr:first-child th {
+    background: #3B82F6;
+    color: #fff;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+.items-table thead tr:nth-child(2) th {
+    background: #EFF6FF;
+    color: #1E3A8A;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+}
+
+/* Body rows */
+.items-table tbody tr {
+    background: #fff;
+    transition: background 0.2s ease;
+}
+
+.items-table tbody tr:nth-child(even) {
+    background: #F9FAFB;
+}
+
+.items-table tbody tr:hover {
+    background: #E0F2FE;
+}
+
+/* Cells */
+.items-table td {
+    padding: 0.75rem 1rem;
+    color: #374151;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+/* “Add” button cell adjusts alignment */
+.items-table td:last-child {
+    text-align: right;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+
+    .items-table thead tr:nth-child(2) th,
+    .items-table td {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+th {
+    text-align: left;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.btn-add {
+    background: linear-gradient(135deg, #6EE7B7 0%, #3B82F6 100%);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-add:hover {
+    background: linear-gradient(135deg, #3B82F6 0%, #6EE7B7 100%);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-add:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(59, 130, 246, 0.6);
+}
