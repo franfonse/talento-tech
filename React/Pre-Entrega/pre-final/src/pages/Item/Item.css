@@ -1,0 +1,49 @@
+/* “Product not found” message */
+.not-found-id {
+  background-color: #1E1E2E;      /* main content background */
+  color: #61DAFB;                /* bright accent */
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 480px;
+  font-size: 2rem;
+}
+
+/* Product details card */
+.product-detail {
+  background-color: #1E1E2E;     /* main content background */
+  color: #FFFFFF;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+/* “Product details” heading */
+.product-detail h1 {
+  font-size: 1.75rem;
+  color: #61DAFB;                /* bright accent */
+  margin-bottom: 0.75rem;
+}
+
+/* Product name */
+.product-detail h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+/* Detail text */
+.product-detail p {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Price styling */
+.product-detail .price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #61DAFB;                /* bright accent */
+  margin-top: 1rem;
+}

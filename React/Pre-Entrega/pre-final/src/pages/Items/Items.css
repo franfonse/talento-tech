@@ -1,0 +1,97 @@
+/* Error message */
+.error {
+    background-color: #E06C75;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+}
+
+.error h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.error p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Items table */
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: #1E1E2E;
+    /* main content background */
+    color: #FFFFFF;
+    font-size: 0.95rem;
+}
+
+.items-table thead tr th {
+    text-align: left;
+}
+
+/* Main header row */
+.items-table thead tr:first-child th {
+    text-align: left;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Secondary header row */
+.items-table thead tr:nth-child(2) th {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Body cells */
+.items-table tbody td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Row hover */
+.items-table tbody tr:hover {
+    background-color: rgba(97, 218, 251, 0.1);
+}
+
+/* Clickable item cells */
+.item-det {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.item-det:hover {
+    color: #61DAFB;
+}
+
+/* “Add” button */
+.btn-add {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid #61DAFB;
+    background: none;
+    color: #61DAFB;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-add:hover {
+    background: #61DAFB;
+    color: #282C34;
+    /* header bg for contrast */
+}
+
+/* Info text under table */
+.items-table~p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+}

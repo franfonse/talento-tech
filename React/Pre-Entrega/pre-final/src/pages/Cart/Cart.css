@@ -1,0 +1,85 @@
+/* Table layout */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: #1E1E2E;
+    /* main content background */
+    color: #FFFFFF;
+    font-size: 0.95rem;
+}
+
+.cart-table thead tr th {
+    text-align: left;
+}
+
+/* Header rows */
+.cart-table thead tr:first-child th {
+    text-align: left;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.cart-table thead tr:nth-child(2) th {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Body cells */
+.cart-table tbody td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hover on rows */
+.cart-table tbody tr:hover {
+    background-color: rgba(97, 218, 251, 0.1);
+    /* accent hover */
+}
+
+/* Totals row styling */
+.cart-table tbody tr:last-of-type td {
+    padding-top: 1rem;
+    font-weight: 600;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons in table */
+.btn {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid #61DAFB;
+    /* bright accent */
+    background: none;
+    color: #61DAFB;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-remove:hover {
+    background: #61DAFB;
+    color: #282C34;
+    /* header bg for contrast */
+}
+
+.btn-clear {
+    margin-top: 1rem;
+}
+
+.btn-clear:hover {
+    background: #61DAFB;
+    color: #282C34;
+}
+
+/* Empty-cart message */
+.h4-empty {
+    text-align: center;
+    margin: 2rem 0;
+    color: rgba(255, 255, 255, 0.75);
+}
