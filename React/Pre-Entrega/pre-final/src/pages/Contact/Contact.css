@@ -1,18 +1,14 @@
-/* Contact section & form */
 .contact-section {
     background-color: #1E1E2E;
-    /* main content background */
     border-radius: 8px;
 }
 
 .contact-section h2 {
     font-size: 1.75rem;
     color: #61DAFB;
-    /* bright accent */
     margin-bottom: 1rem;
 }
 
-/* form grid */
 .contact-form {
     display: grid;
     gap: 0.75rem;
@@ -20,13 +16,11 @@
     max-width: 360px;
 }
 
-/* labels */
 .contact-form label {
     color: rgba(255, 255, 255, 0.85);
     font-weight: 500;
 }
 
-/* inputs & textarea */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -45,7 +39,6 @@
     border-color: #61DAFB;
 }
 
-/* submit button */
 .btn-submit {
     padding: 0.75rem 1.5rem;
     border: 1px solid #61DAFB;
