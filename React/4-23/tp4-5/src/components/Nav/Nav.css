@@ -9,10 +9,26 @@ nav ul {
     justify-content: flex-start;
     align-items: flex-end;
     gap: 20px;
+    background-color: #1E1E1E;
 }
 
 nav ul a {
     margin: 0 0 8px 50px;
     text-decoration: none;
-    color: white;
+    color: #CCCCCC;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+/* hover state */
+ul a:hover {
+    background-color: #2A2A2A;
+    color: #FFFFFF;
+}
+
+/* active state */
+ul a.active {
+    background-color: #00b4db;
+    color: #FFFFFF;
 }

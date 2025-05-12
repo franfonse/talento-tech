@@ -1,7 +1,7 @@
-import './MyItems.css';
+import './Cart.css';
 import useCart from '../../contexts/cart/cart';
 
-function MyItems() {
+function Cart() {
 
     const { cart, clearCart, getTotalCart, getTotalItem, removeFromCart } = useCart();
 
@@ -36,11 +36,15 @@ function MyItems() {
                 </tbody>
             </table>
 
-            {cart.length === 0 ? <h4 className="h4-empty">Your shopping cart is empty</h4> : <button className='btn btn-clear' onClick={() => clearCart()}>Clear cart</button>}
+            {
+                cart.length === 0 ?
+                    <h4 className="h4-empty">Your shopping cart is empty</h4> :
+                    <button className='btn btn-clear' onClick={() => clearCart()}>Clear cart</button>
+            }
 
         </>
     )
 
 }
 
-export default MyItems;
+export default Cart;

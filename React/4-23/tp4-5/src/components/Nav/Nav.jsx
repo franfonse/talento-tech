@@ -5,9 +5,11 @@ function Nav() {
     return (
         <nav>
             <ul>
-                <NavLink to="/" end className={({isActive}) => isActive ? 'home active': 'home'}>Home</NavLink>
-                <NavLink to="/items" end className={({isActive}) => isActive ? 'items active': 'items'}>Shopping</NavLink>
-                <NavLink to="/my-items" end className={({isActive}) => isActive ? 'my-items active': 'my-items'}>My items</NavLink>
+                <NavLink to="/" end className={({ isActive }) => isActive ? 'home active' : 'home'}>Home</NavLink>
+                <NavLink to="/products" end className={({ isActive }) => isActive ? 'products active' : 'products'}>Products</NavLink>
+                <NavLink to="/cart" end className={({ isActive }) => isActive ? 'cart active' : 'cart'}>Cart</NavLink>
+                <NavLink to="/about" end className={({ isActive }) => isActive ? 'about active' : 'about'}>About</NavLink>
+                <NavLink to="/contact" end className={({ isActive }) => isActive ? 'contact active' : 'contact'}>Contact</NavLink>
             </ul>
         </nav>
     )

@@ -1,12 +1,13 @@
-import './Items.css';
+import './Products.css';
 import useCart from '../../contexts/cart/cart';
 import { useEffect } from 'react';
 import useItems from '../../contexts/items/items';
+import Loading from '../../components/Loading/Loading';
 
-function Items() {
+function Products() {
 
     const { addToCart, getQty } = useCart();
-    const { items, getItems, loading, error } = useItems();
+    const { items, getItems, loading, errorItems, viewItem } = useItems();
 
     useEffect(() => {
         if (items.length === 0) {
@@ -60,13 +61,11 @@ function Items() {
     // ];
 
     return loading ?
-        <div className="loader-overlay">
-            <div className="loader"></div>
-        </div> :
-        error ?
+        <Loading/> :
+        errorItems ?
             <div className='error'>
                 <h2>There was an error while fetching data!</h2>
-                <p>{error}</p>
+                <p>{errorItems}</p>
             </div> :
             <>
                 <table className='items-table'>
@@ -84,9 +83,9 @@ function Items() {
                         {
                             items.map((item, index) => (
                                 <tr key={index}>
-                                    <td>{item.name}</td>
-                                    <td>{item.desc}</td>
-                                    <td>${item.price}</td>
+                                    <td className='item-det' onClick={() => viewItem(item.id)}>{item.name}</td>
+                                    <td className='item-det' onClick={() => viewItem(item.id)}>{item.desc}</td>
+                                    <td className='item-det' onClick={() => viewItem(item.id)}>${item.price}</td>
                                     <td><button className='btn btn-add' onClick={() => addToCart(item)}>Add</button></td>
                                 </tr>
                             ))
@@ -95,11 +94,10 @@ function Items() {
                 </table>
 
                 <br />
-                <br />
 
                 <p>Your cart has {getQty()} items.</p>
             </>
 
 }
 
-export default Items;
+export default Products;

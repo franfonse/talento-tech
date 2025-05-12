@@ -1,0 +1,20 @@
+.about-us {
+  background-color: #1E1E1E;
+  padding: 40px 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #CCCCCC;
+}
