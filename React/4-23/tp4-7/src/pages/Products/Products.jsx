@@ -3,11 +3,13 @@ import useCart from '../../contexts/cart/cart';
 import { useEffect } from 'react';
 import useItems from '../../contexts/items/items';
 import Loading from '../../components/Loading/Loading';
+import useUser from '../../contexts/user/user';
 
 function Products() {
 
     const { addToCart, getQty } = useCart();
-    const { items, getItems, loading, errorItems, viewItem } = useItems();
+    const { items, getItems, errorItems, viewItem, loading } = useItems();
+    const { user } = useUser();
 
     useEffect(() => {
         if (items.length === 0) {
@@ -86,7 +88,7 @@ function Products() {
                                     <td className='item-det' onClick={() => viewItem(item.id)}>{item.name}</td>
                                     <td className='item-det' onClick={() => viewItem(item.id)}>{item.desc}</td>
                                     <td className='item-det' onClick={() => viewItem(item.id)}>${item.price}</td>
-                                    <td><button className='btn btn-add' onClick={() => addToCart(item)}>Add</button></td>
+                                    { user && <td><button className='btn btn-add' onClick={() => addToCart(item)}>Add</button></td>}
                                 </tr>
                             ))
                         }
